@@ -270,9 +270,9 @@ buildOc:
 
 
 func toRGB*(color: Color): RGBValue =
-  result.r = RedValue(uint32(color) shr 16)
-  result.g = GreenValue(uint32(color) shr 8)
-  result.b = BlueValue(uint32(color))
+  result.r = RedValue((uint32(color) shr 16) and 0xFF)
+  result.g = GreenValue((uint32(color) shr 8) and 0xFF)
+  result.b = BlueValue(uint32(color) and 0xFF)
 
 
 func toHexString*(color: Color): string =
