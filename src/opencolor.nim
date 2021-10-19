@@ -95,6 +95,10 @@ macro buildOc(colorDefs: untyped): untyped =
       parserStmt.add nnkElifBranch.newTree(firstCond, firstResultBody)
 
   let converterProcBody = quote do:
+    runnableExamples:
+      assert oc"gray-9" == ocGray9
+      assert oc"Lime 3" == ocLime3
+
     let `normalizedColorNameSym` = normalize(colorName)
 
     `parserStmt`
@@ -270,16 +274,28 @@ buildOc:
 
 
 func toRGB*(color: Color): RGBValue =
+  runnableExamples:
+    let (r, g, b) = ocTeal5.toRGB()
+
+    assert r == 32
+    assert g == 201
+    assert b == 151
+
   result.r = RedValue((uint32(color) shr 16) and 0xFF)
   result.g = GreenValue((uint32(color) shr 8) and 0xFF)
   result.b = BlueValue(uint32(color) and 0xFF)
 
 
 func toHexString*(color: Color): string =
+  runnableExamples:
+    assert ocIndigo6.toHexString() == "#4C6EF5"
+
   result = "#" & uint32(color).toHex(6)
 
 
 func `$`*(color: Color): string =
+  ## An alias for `toHexString <#toHexString,Color>`_.
+
   return color.toHexString()
 
 
