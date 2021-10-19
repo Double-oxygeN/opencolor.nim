@@ -1,3 +1,13 @@
 .vscode/
 
 .DS_Store
+
+# For testament
+nimcache/
+testresults/
+testresults.html
+
+!tests/
+tests/*
+!tests/*.nim
+!tests/config.nims
