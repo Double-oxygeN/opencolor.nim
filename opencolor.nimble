@@ -5,7 +5,7 @@ author        = "Double-oxygeN"
 description   = "Nim bindings for Open color"
 license       = "MIT"
 srcDir        = "src"
-skipDirs      = ["docs", "tests"]
+skipDirs      = @["docs", "tests"]
 
 
 # Dependencies
