@@ -1,6 +1,6 @@
 # Package
 
-version       = "1.9.1"
+version       = "1.9.1.1"
 author        = "Double-oxygeN"
 description   = "Nim bindings for Open color"
 license       = "MIT"
