@@ -3,6 +3,43 @@
 # This software is released under the MIT License.
 # https://opensource.org/licenses/MIT
 
+## :Author: Double-oxygeN
+## :Original author: `heeyeun`_
+## :Version: 1.9.1
+## :License: MIT
+##
+## Nim bindings for open color.
+##
+## .. _heeyeun: https://yeun.github.io/open-color/
+##
+## How to use
+## ==========
+##
+## Colors as constants
+## -------------------
+##
+## .. code-block :: Nim
+##   from opencolor import ocGray8, `$`, toRGB
+##
+##   # You can use colors as strings (CSS-style).
+##   ctx.fillStyle = $ocGray8  # => #343A40
+##
+##   # ... or as RGB values (0 to 255).
+##   block:
+##     let (r, g, b) = ocGray8.toRGB()
+##     doc.setFillColor(r / 0xFF, g / 0xFF, b / 0xFF)
+##
+## Colors by name
+## --------------
+##
+## .. code-block :: Nim
+##   from opencolor import oc, `$`
+##
+##   # You can also pick a color by its name.
+##   const textMainColor = oc"gray-8"
+##   ctx.fillStyle = $textMainColor
+##
+
 import macros, strutils, tables
 
 type

@@ -2,7 +2,7 @@
 
 version       = "0.1.0"
 author        = "Double-oxygeN"
-description   = "Open color binding in Nim"
+description   = "Nim bindings for Open color"
 license       = "MIT"
 srcDir        = "src"
 

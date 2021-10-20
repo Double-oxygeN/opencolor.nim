@@ -1,7 +1,7 @@
 OpenColor.nim
 =============
 
-`Open color`_ binding in Nim.
+Nim bindings for `Open color`_.
 
 .. _Open color: https://yeun.github.io/open-color/
 
