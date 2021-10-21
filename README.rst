@@ -5,6 +5,13 @@ Nim bindings for `Open color`_.
 
 .. _Open color: https://yeun.github.io/open-color/
 
+Installation
+------------
+
+.. code:: 
+
+  nimble install opencolor
+
 Documentations
 --------------
 
